@@ -1,17 +1,15 @@
 package com.cn.sz.bubbling;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
- * 冒泡排序-基础版本
- * 
+ * 冒泡排序->优化版本->减少每一趟的比较次数
  * @author HuWeiLiang
  *
  */
-public class BubblingDemo001 {
+public class BubblingDemo002 {
 	public static void main(String[] args) {
-
+		
 		int[] sortData = { 9, 8, 7, 6, 4 };
 		BubbingSort01(sortData);
 	}
@@ -20,7 +18,7 @@ public class BubblingDemo001 {
 		int len = sortData.length;
 		for (int j = 0; j < len - 1; j++) {
 			System.out.println("-----第" + (j + 1) + "趟------");
-			for (int i = 0; i < len - 1; i++) {
+			for (int i = 0; i < len - 1-j; i++) {//len-1-j 每执行一趟,可以少执行一次，因为后面的第J位已经排好序了
 				if (sortData[i] > sortData[i + 1]) {
 					int temp = sortData[i + 1];
 					sortData[i + 1] = sortData[i];
