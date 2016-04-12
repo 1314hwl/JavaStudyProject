@@ -1,5 +1,11 @@
 package com.cn.sz.sort.comparable;
 
+/**
+ * 内置引用数据类型-排序
+ * 基本数据类型都实现了Comparable<T>接口
+ * @author HuWeiLiang
+ *
+ */
 public class JavaBaseType {
 	
 	public static void main(String[] args) {
@@ -12,6 +18,7 @@ public class JavaBaseType {
 		String str3="abc";
 		String str4="abg";
 		System.out.println(str3.compareTo(str4));//如果不是子串,返回第一个不相同字母的unicode之差：c-g=-4
+		
 		
 	}
 

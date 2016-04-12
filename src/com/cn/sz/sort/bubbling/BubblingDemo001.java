@@ -1,4 +1,4 @@
-package com.cn.sz.bubbling;
+package com.cn.sz.sort.bubbling;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
