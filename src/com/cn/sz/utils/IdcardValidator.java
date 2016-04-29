@@ -431,7 +431,7 @@ public class IdcardValidator {
 	public static void main(String[] args) throws Exception {
 
 		String idcard15 = "142431199001145";// 15位
-		String idcard18 = "421125198601081714";// 18位
+		String idcard18 = "450621199108200824";// 18位
 		IdcardValidator iv = new IdcardValidator();
 		System.out.println(iv.isValidatedAllIdcard(idcard15));
 		System.out.println(iv.isValidatedAllIdcard(idcard18));
