@@ -14,6 +14,6 @@
 2.获取键：keyset(),entrySet()+getKey()
 3.获取键和值：keyset()+get() ,entrySet()+getKey()+getValue()
 6>Properties 是HashTable子类：资源配置文件，相对路径获取文件
-7>HashTable
+7>HashTable，Hashmap和hashTable的区别:1.hashTable线程安全hashmap非线程安全。2.hashMap的键和值都可以为空hashTable不可以。3.hashMap是map接口的实现类hashTable是dictionary的实现类。
 8>Stack
 9>Collections

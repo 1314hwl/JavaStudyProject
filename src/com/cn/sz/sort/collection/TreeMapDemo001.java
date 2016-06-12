@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.TreeMap;
 
 /**
- * TreeMap和HashMap用法类型，但是要求键可以排序
+ * TreeMap和HashMap用法类似，但是要求键可以排序
  * 
  * @author HuWeiLiang
  *
