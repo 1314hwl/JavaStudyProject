@@ -1,0 +1,25 @@
+Groovy的安装步骤:
+
+Gradle中常用的Groovy知识点:
+1.def dx = tasks.findByName("dex${variant.name.capitalize()}")
+2.apply plugin: 'com.android.application'
+3.buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+    }
+}
+4.//groovy遍历的一种写法 each后面是闭包
+android.applicationVariants.each { variant ->
+}
+
+#-------------------------------------------------------------
+Gradle构建系统有自己的生命周期，初始化、配置和运行三个阶段。
+
+1.初始化阶段，会去读取根工程中setting.gradle中的include信息，决定有哪几个工程加入构建，创建project实例，比如下面有三个工程： include ':app', ':lib1', ':lib2'
+2.配置阶段，会去执行所有工程的build.gradle脚本，配置project对象，一个对象由多个任务组成，此阶段也会去创建、配置task及相关信息。
+3.运行阶段，根据gradle命令传递过来的task名称，执行相关依赖任务。
+
+
