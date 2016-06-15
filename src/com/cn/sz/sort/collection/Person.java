@@ -1,7 +1,7 @@
 package com.cn.sz.sort.collection;
 
 
-public class Person implements Comparable<Person>{
+public class Person {
 	private String name;
 	private int age;
 	public Person(String name, int age) {
@@ -25,10 +25,7 @@ public class Person implements Comparable<Person>{
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + "]";
 	}
-	@Override
-	public int compareTo(Person o) {
-		return this.age-o.age;
-	}
+
 
 	
 

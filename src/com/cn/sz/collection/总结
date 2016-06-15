@@ -1,0 +1,19 @@
+集合总结：
+1.三个知识点：
+1>迭代器:java.util.Iterator+hasNext(),next(),remove();for:each,必须实现Iterable+Iterator()
+2>比较器:1.实体类可以排序java.lang.comparable+compareTo();2.排序比较器(解耦，多种排序规则)java.util.Comparator+compare;3.List+Collectios.sort();4.TreeSet5.TreeMap
+3>泛型:泛型类，泛型接口，泛型方法，泛型擦除，通配符 ？ extends super 泛型嵌套
+2.六个接口：Collection,Map,Itrator,Comparable,Set,List
+3.九个常用类
+1>ArrayList，底层用数组实现,查看多余修改时使用(重点) 遍历：1.for+get 2.for each 3.Iterator 
+2>LinkList，底层用数组+链表，修改多余查看时使用。
+3>HashSet 不能重复，底层用HashMap实现，必须重写：equals(),HashCode()
+4>TreeSet 元素可以排序，或者提供排序的业务类
+5>HashMap 键不能重复，必须重写equals(),HashCode()，值可以重复;
+1.获取值：values(),keySet()+get(),entrySet()+getValue()
+2.获取键：keyset(),entrySet()+getKey()
+3.获取键和值：keyset()+get() ,entrySet()+getKey()+getValue()
+6>Properties 是HashTable子类：资源配置文件，相对路径获取文件
+7>HashTable，Hashmap和hashTable的区别:1.hashTable线程安全hashmap非线程安全。2.hashMap的键和值都可以为空hashTable不可以。3.hashMap是map接口的实现类hashTable是dictionary的实现类。
+8>Stack
+9>Collections
