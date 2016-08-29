@@ -7,7 +7,7 @@ class MethodClosureSimple {
 		this.limit = limit
 	}
 
-	boolean validate(String value){
+	def validate(String value){
 		return value.length() <= limit
 	}
 }

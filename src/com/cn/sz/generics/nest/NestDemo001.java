@@ -17,9 +17,9 @@ public class NestDemo001 {
 		Java<String> java = new Java<String>();
 		java.setT("java programme...");
 		System.out.println(java.getT());
-		Programme<Java> p = new Programme<Java>();
+		Programme<Java<?>> p = new Programme<Java<?>>();
 		p.setT(java);
-		Java java1 = p.getT();
+		Java<?> java1 = p.getT();
 		System.out.println(java1.getT());
 		
 		Map<String ,String >map=new HashMap<String,String>();

@@ -1,14 +1,22 @@
 package com.cn.sz.groovy.closure
 
-class ClosureDemo001 {
+import org.codehaus.groovy.transform.trait.Traits.Implemented;
+
+
+
+class ClosureDemo001 implements Serializable{
 
 
 	public ClosureDemo001(){
 	}
+	
+	
+	
+	
 
 
 	void closureTest1(){
-		def acoll =["Groovy", "Java", "Ruby"]
+		def acoll =["Groovy", 1, "Ruby"]
 		for(Iterator iter = acoll.iterator(); iter.hasNext();){
 			println iter.next()
 		}

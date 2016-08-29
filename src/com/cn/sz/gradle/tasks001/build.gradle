@@ -1,0 +1,113 @@
+
+task testTask001{ doLast{ println 'hello world 0001'
+	} }
+
+task testTask002{
+	doFirst{ println 'testTask001 doFirst.....' }
+	doLast{ println 'testTask001 doLast.......' }
+}
+
+testTask002<<{ println 'testTask002 <<...............' }
+
+testTask002.doFirst{ println 'testTask002 Hello doFirst.....' }
+
+testTask002.doLast{ println 'testTask002 Hello doLast.......' }
+
+task testTask003 << { println 'testTask003.....' }
+
+/**
+ * task的定义:task taskName{ doLast{}}
+ * task任务的简写:task taskName<<{}：<<==doLast{}
+ * 
+ */
+
+task testTask004(dependsOn:testTask003) <<{ println "testTask004..." }
+/**
+ * dependsOn:taskName:任务的依赖,先执行依赖的任务
+ */
+
+task testTask005(dependsOn:'testTask006')<<{ println "testTask005....." }
+
+task testTask006<<{ println "testTask006....." }
+/**
+ * 被依赖的任务testTask006不需要在testTask005之前定义
+ */
+task testTask007<<{ println "testTask007....." }
+testTask007.dependsOn 'testTask006','testTask005'
+/**
+ * 还可以这么写依赖,但testTask006只执行了一次
+ */
+
+//task testTask008 <<{ ext.what="hwl" }//这么写会报错，为啥？
+task testTask008{
+	ext.what="hwl"
+	ext.userName="test"
+	ext.passwd="123456"
+}
+/**
+ * 自定义人物的属性，注意格式
+ */
+
+task testTask009<<{
+	println testTask008.userName
+	println testTask008.passwd
+}
+
+5.times {index->
+	task "task$index"<<{ println "task $index" } }
+/**
+ * 这里动态的定义了5个task(task0,task1,task2,task3,task4)
+ */
+
+task0.dependsOn task1,task2,task3,task4
+
+defaultTasks 'task3','task4'
+
+//通过DAG配置
+task distribution << { println "We build the zip with version=$version" }
+task release(dependsOn: 'distribution') << { println 'We release now' }
+gradle.taskGraph.whenReady {taskGraph ->
+	println "#########taskGraph.whenReady......."
+	if (taskGraph.hasTask(release)) {
+		version = '1.0'
+	} else {
+		version = '1.0-SNAPSHOT'
+	}
+}
+
+task testTask100(dependsOn:[task3, task4]){ println "hello task100....." }
+
+//深入理解task
+task(deepHelloTask)<<{ println 'hello task!' }
+
+task(deleteTask,type:Delete){
+    println 'delete task excute...'
+}
+
+task('deleteTask0001',type:Delete){
+    println 'delete task0001 excute...'
+}
+
+tasks.create(name:'otherSpaceNameTask')<<{
+   println 'hello other spacename Task...'
+}
+
+tasks.create(name:'otherSpaceNameTask0001',type:Delete)<<{
+   println 'hello other spacename Task0001...'
+}
+
+
+task test0001 << {
+   println "hello world"
+   println "task name--->"+tasks.test001.name
+}
+
+
+
+
+
+
+
+
+
+

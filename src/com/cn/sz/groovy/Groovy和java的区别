@@ -1,72 +1,72 @@
-1. ÔÚGroovy¿ÉÒÔÓÃdef¶¨ÒåÎÞÀàÐÍµÄ±äÁ¿(¶¨Òå±äÁ¿·½ÃædefÓëJavaScriptÖÐµÄvarÏàËÆ)£¬ºÍ·µ»ØÖµÎªÎÞÀàÐÍµÄ·½·¨£¬¶øÔÚJavaÖÐÃ»ÓÐdef
+1. åœ¨Groovyå¯ä»¥ç”¨defå®šä¹‰æ— ç±»åž‹çš„å˜é‡(å®šä¹‰å˜é‡æ–¹é¢defä¸ŽJavaScriptä¸­çš„varç›¸ä¼¼)ï¼Œå’Œè¿”å›žå€¼ä¸ºæ— ç±»åž‹çš„æ–¹æ³•ï¼Œè€Œåœ¨Javaä¸­æ²¡æœ‰def
 
-2. JavaÖÐµÄequals·½·¨¶ÔÓ¦GroovyÖÐµÄ== , ¶øJavaÖÐµÄ==£¨ÅÐ¶ÏÊÇ·ñÒýÓÃÍ¬Ò»¶ÔÏó£©¶ÔÓ¦GroovyÖÐµÄis·½·¨
+2. Javaä¸­çš„equalsæ–¹æ³•å¯¹åº”Groovyä¸­çš„== , è€ŒJavaä¸­çš„==ï¼ˆåˆ¤æ–­æ˜¯å¦å¼•ç”¨åŒä¸€å¯¹è±¡ï¼‰å¯¹åº”Groovyä¸­çš„isæ–¹æ³•
 
-3. JavaÖÐµÄÊý×é¶¨Òåint[] a = {1, 2, 3}; ÔÚGroovyÐ´³Éint[] a = [1, 2, 3]
+3. Javaä¸­çš„æ•°ç»„å®šä¹‰int[] a = {1, 2, 3}; åœ¨Groovyå†™æˆint[] a = [1, 2, 3]
 
-4. JavaÖÐµÄforÑ­»·for (int i = 0; i < len; i++) {...} ÔÚGroovyÖÐ»¹¿ÉÒÔÐ´³Éfor (i in 0..len-1) {...} »òÕß for (i in 0..<len) {...}
+4. Javaä¸­çš„forå¾ªçŽ¯for (int i = 0; i < len; i++) {...} åœ¨Groovyä¸­è¿˜å¯ä»¥å†™æˆfor (i in 0..len-1) {...} æˆ–è€… for (i in 0..<len) {...}
 
-5. JavaÖÐµÄ·½·¨·µ»ØÐ´Îªreturn; »òÕßreturn obj; ÔÚGroovyµÄ·½·¨ÖÐreturnÊÇ¿ÉÑ¡µÄ
+5. Javaä¸­çš„æ–¹æ³•è¿”å›žå†™ä¸ºreturn; æˆ–è€…return obj; åœ¨Groovyçš„æ–¹æ³•ä¸­returnæ˜¯å¯é€‰çš„
 
-6.JavaÖÐµÄinner class¼´ÄÚ²¿Àà£¬ÔÚGroovyÖÐÓÃClosureÊµÏÖ£¨ClosureÊÇJava7ÕýÔÚ¿¼ÂÇµÄÒ»¸öÌØÐÔ£¬±Èinner classÔÚÓïÒå·½Ãæ¸üÍêÉÆ£©
+6.Javaä¸­çš„inner classå³å†…éƒ¨ç±»ï¼Œåœ¨Groovyä¸­ç”¨Closureå®žçŽ°ï¼ˆClosureæ˜¯Java7æ­£åœ¨è€ƒè™‘çš„ä¸€ä¸ªç‰¹æ€§ï¼Œæ¯”inner classåœ¨è¯­ä¹‰æ–¹é¢æ›´å®Œå–„ï¼‰
 
-7.GroovyÖÐµÄ×¢ÊÍ±ÈJava¶àÁËÊ×ÐÐ×¢ÊÍ#!£¬ÆäËûÓëJavaÏàÍ¬±ÈÈçµ¥ÐÐ×¢ÊÍ£º//    ¶àÐÐ×¢ÊÍ£º/*  */   »òÕßÊÇ  Ö§³ÖjavadocµÄ/**   */
+7.Groovyä¸­çš„æ³¨é‡Šæ¯”Javaå¤šäº†é¦–è¡Œæ³¨é‡Š#!ï¼Œå…¶ä»–ä¸ŽJavaç›¸åŒæ¯”å¦‚å•è¡Œæ³¨é‡Šï¼š//    å¤šè¡Œæ³¨é‡Šï¼š/*  */   æˆ–è€…æ˜¯  æ”¯æŒjavadocçš„/**   */
 
-8.Java5ÖÐµÄfor-each£ºfor (Type t : iteratable) {...}  ÔÚGroovyÖÐ£¬for (t in iteratable) {...}
+8.Java5ä¸­çš„for-eachï¼šfor (Type t : iteratable) {...}  åœ¨Groovyä¸­ï¼Œfor (t in iteratable) {...}
 
-9.GroovyÖÐswitchÓï¾äÓëJavaÖÐÏàÍ¬£¬²»¹ýÖ§³Ö¸ü¶àÀàÐÍÁË£¬±ÈÈçString
+9.Groovyä¸­switchè¯­å¥ä¸ŽJavaä¸­ç›¸åŒï¼Œä¸è¿‡æ”¯æŒæ›´å¤šç±»åž‹äº†ï¼Œæ¯”å¦‚String
 
-10.GroovyµÄwhileÓï¾ä¸úJavaÏàÍ¬£¬µ«·ÏÆúÁËdo-while £¨¿¼ÂÇµ½ÓïÒå·½ÃæµÄÎÊÌâ£¬¶øÇÒdo-while¿ÉÒÔÓÃÆäËûÐÎÊ½µÄÑ­»·Óï¾ä´úÌæ£¬Ê¹ÓÃÆµÂÊµÍ£©
+10.Groovyçš„whileè¯­å¥è·ŸJavaç›¸åŒï¼Œä½†åºŸå¼ƒäº†do-while ï¼ˆè€ƒè™‘åˆ°è¯­ä¹‰æ–¹é¢çš„é—®é¢˜ï¼Œè€Œä¸”do-whileå¯ä»¥ç”¨å…¶ä»–å½¢å¼çš„å¾ªçŽ¯è¯­å¥ä»£æ›¿ï¼Œä½¿ç”¨é¢‘çŽ‡ä½Žï¼‰
 
-11.JavaÖÐµÄString³£Á¿±íÊ¾Îª"Hello, É½·çÐ¡×Ó"£¬ÔÚGroovyÖÐ¿ÉÈçÏÂ±íÊ¾¡°Hello, É½·çÐ¡×Ó¡±£¬¡®Hello, É½·çÐ¡×Ó¡¯£¬¡°¡±¡°Hello, É½·çÐ¡×Ó¡±¡°¡±£¨¶àÐÐ£©£¬¡®¡¯¡®Hello, É½·çÐ¡×Ó¡¯¡®¡¯£¨¶àÐÐ£©£¬def name="É½·çÐ¡×Ó"    "Hello, ${name}" or  "Hello, $name"
+11.Javaä¸­çš„Stringå¸¸é‡è¡¨ç¤ºä¸º"Hello, å±±é£Žå°å­"ï¼Œåœ¨Groovyä¸­å¯å¦‚ä¸‹è¡¨ç¤ºâ€œHello, å±±é£Žå°å­â€ï¼Œâ€˜Hello, å±±é£Žå°å­â€™ï¼Œâ€œâ€â€œHello, å±±é£Žå°å­â€â€œâ€ï¼ˆå¤šè¡Œï¼‰ï¼Œâ€˜â€™â€˜Hello, å±±é£Žå°å­â€™â€˜â€™ï¼ˆå¤šè¡Œï¼‰ï¼Œdef name="å±±é£Žå°å­"    "Hello, ${name}" or  "Hello, $name"
 
-12.ÔÚGroovyÖÐ¶¨ÒåÀà£¬¶¨Òå·½·¨ÓëJavaÖÐ¶¨ÒåÀàÏàÍ¬£¬Î¨Ò»Çø±ðÔÚÓÚGroovyÖÐÀà£¬ÊôÐÔÄ¬ÈÏÊÇprivateµ«»á×Ô¶¯Éú³Éget/set·½·¨¹©Íâ²¿Ê¹ÓÃ£¬·½·¨Ä¬ÈÏÊÇpublicµÄ£¬¶øÔÚJavaÖÐÄ¬ÈÏÊÇpackageµÄ£¬ÁíÍâ£¬ÔÚGroovyÖÐ¿ÉÒÔÓÃdefÀ´¶¨Òå·½·¨£¬Çë¿´×¢ÊÍ¡£
+12.åœ¨Groovyä¸­å®šä¹‰ç±»ï¼Œå®šä¹‰æ–¹æ³•ä¸ŽJavaä¸­å®šä¹‰ç±»ç›¸åŒï¼Œå”¯ä¸€åŒºåˆ«åœ¨äºŽGroovyä¸­ç±»ï¼Œå±žæ€§é»˜è®¤æ˜¯privateä½†ä¼šè‡ªåŠ¨ç”Ÿæˆget/setæ–¹æ³•ä¾›å¤–éƒ¨ä½¿ç”¨ï¼Œæ–¹æ³•é»˜è®¤æ˜¯publicçš„ï¼Œè€Œåœ¨Javaä¸­é»˜è®¤æ˜¯packageçš„ï¼Œå¦å¤–ï¼Œåœ¨Groovyä¸­å¯ä»¥ç”¨defæ¥å®šä¹‰æ–¹æ³•ï¼Œè¯·çœ‹æ³¨é‡Šã€‚
 
-13.¶ÔÏó´´½¨ÔÚJavaÐ´ÎªThought t = new Thought(); ÔÚGroovyÒ²¿ÉÒÔÕâÑùÐ´£¬²»¹ý»¹¶àÁËÖÖÐ´·¨£ºdef t = new Thought()
+13.å¯¹è±¡åˆ›å»ºåœ¨Javaå†™ä¸ºThought t = new Thought(); åœ¨Groovyä¹Ÿå¯ä»¥è¿™æ ·å†™ï¼Œä¸è¿‡è¿˜å¤šäº†ç§å†™æ³•ï¼šdef t = new Thought()
 
-14.¾²Ì¬·½·¨µ÷ÓÃÔÚJavaºÍGroovyÖÐÏàÍ¬£¬¼´ClassName.staticMethodName();
+14.é™æ€æ–¹æ³•è°ƒç”¨åœ¨Javaå’ŒGroovyä¸­ç›¸åŒï¼Œå³ClassName.staticMethodName();
 
-15.ÊµÏÖ½Ó¿ÚºÍ¼Ì³Ð¸¸Àà·½ÃæGroovyÒ²ÓëJavaÍêÈ«ÏàÍ¬£¬¼´ÊµÏÖ½Ó¿Úclass ClassName implements InterfaceName {...}
-      ¼Ì³Ð¸¸Àà£ºclass ClassName extends SuperClass {...}
+15.å®žçŽ°æŽ¥å£å’Œç»§æ‰¿çˆ¶ç±»æ–¹é¢Groovyä¹Ÿä¸ŽJavaå®Œå…¨ç›¸åŒï¼Œå³å®žçŽ°æŽ¥å£class ClassName implements InterfaceName {...}
+      ç»§æ‰¿çˆ¶ç±»ï¼šclass ClassName extends SuperClass {...}
 
-16.¶¨Òå½Ó¿Ú·½ÃæGroovyÓëJavaÍêÈ«ÏàÍ¬£¬¼´interface InterfaceName {...}  //ÔÚGroovyÖÐÄ¬ÈÏÎªpublicµÄ
+16.å®šä¹‰æŽ¥å£æ–¹é¢Groovyä¸ŽJavaå®Œå…¨ç›¸åŒï¼Œå³interface InterfaceName {...}  //åœ¨Groovyä¸­é»˜è®¤ä¸ºpublicçš„
 
-17.ÕýÔò±í´ïÊ½³£Á¿ÔÚJavaÖÐÃ»ÓÐ£¬ÔÚGroovyÖÐ±íÊ¾Îª /pattern/ 
+17.æ­£åˆ™è¡¨è¾¾å¼å¸¸é‡åœ¨Javaä¸­æ²¡æœ‰ï¼Œåœ¨Groovyä¸­è¡¨ç¤ºä¸º /pattern/ 
 
-18.Hash³£Á¿(ÀàÐÍÎªjava.util.HashMap)ÔÚJavaÃ»ÓÐ£¬ÔÚGroovyÖÐ±íÊ¾Îª def frequence = ["the": 5, "hello": 2, "world": 2]
+18.Hashå¸¸é‡(ç±»åž‹ä¸ºjava.util.HashMap)åœ¨Javaæ²¡æœ‰ï¼Œåœ¨Groovyä¸­è¡¨ç¤ºä¸º def frequence = ["the": 5, "hello": 2, "world": 2]
 
-19.Àà±äÁ¿¼´static±äÁ¿£¬GroovyÓëJavaÏàÍ¬£¬static String name = "É½·çÐ¡×Ó"£¬ÔÚGroovyÒ²¿ÉÐ´Îªstatic name = "É½·çÐ¡×Ó"
+19.ç±»å˜é‡å³staticå˜é‡ï¼ŒGroovyä¸ŽJavaç›¸åŒï¼Œstatic String name = "å±±é£Žå°å­"ï¼Œåœ¨Groovyä¹Ÿå¯å†™ä¸ºstatic name = "å±±é£Žå°å­"
 
-20.ÔÚvarargs·½·¨·½Ãæ£¬Groovy±ÈJava¶àÒ»ÖÖ±í´ï·½Ê½£¬java/groovy£ºvarargsMethod(Type... args)£¬groovy£ºvarargsMethod(Type[] args)
-21.ÒýÓÃµ±Ç°¶ÔÏó£¬GroovyºÍJavaÏàÍ¬£¬ÔÚJavaÖÐÓÃthis±íÊ¾£¬ÔÚGroovyÖÐÒ²ÓÃthis±íÊ¾£¬¶øÇÒÔÚGroovyÖÐ£¬this¿ÉÒÔ³öÏÖÔÚstatic·¶Î§ÖÐ£¬Ö¸ÏòËùÔÚÀàµÄÀà¶ÔÏó£¬±¾ÀýÖÐ£¬thisµÈÍ¬ÓÚThisInStaticScope.class£¨JavaÐ´·¨£©»òThisInStaticScope£¨GroovyÐ´·¨£©
+20.åœ¨varargsæ–¹æ³•æ–¹é¢ï¼ŒGroovyæ¯”Javaå¤šä¸€ç§è¡¨è¾¾æ–¹å¼ï¼Œjava/groovyï¼švarargsMethod(Type... args)ï¼Œgroovyï¼švarargsMethod(Type[] args)
+21.å¼•ç”¨å½“å‰å¯¹è±¡ï¼ŒGroovyå’ŒJavaç›¸åŒï¼Œåœ¨Javaä¸­ç”¨thisè¡¨ç¤ºï¼Œåœ¨Groovyä¸­ä¹Ÿç”¨thisè¡¨ç¤ºï¼Œè€Œä¸”åœ¨Groovyä¸­ï¼Œthiså¯ä»¥å‡ºçŽ°åœ¨staticèŒƒå›´ä¸­ï¼ŒæŒ‡å‘æ‰€åœ¨ç±»çš„ç±»å¯¹è±¡ï¼Œæœ¬ä¾‹ä¸­ï¼Œthisç­‰åŒäºŽThisInStaticScope.classï¼ˆJavaå†™æ³•ï¼‰æˆ–ThisInStaticScopeï¼ˆGroovyå†™æ³•ï¼‰
 
-22.×ÓÀàÖÐµ÷ÓÃ¸¸Àà·½·¨£¬GroovyºÍJavaÒ²ÏàÍ¬£¬ÔÚJavaÖÐ super.methodName() £¬ÔÚGroovyÖÐ super.methodName()
+22.å­ç±»ä¸­è°ƒç”¨çˆ¶ç±»æ–¹æ³•ï¼ŒGroovyå’ŒJavaä¹Ÿç›¸åŒï¼Œåœ¨Javaä¸­ super.methodName() ï¼Œåœ¨Groovyä¸­ super.methodName()
 
-23.ÃüÃû¿Õ¼äµÄ¶¨Òå£¬GroovyºÍJavaÏàÍ¬£¬ÔÚJavaÖÐ package edu.ecust.bluesun;   ÔÚGroovyÖÐ package edu.ecust.bluesun     £¨·ÖºÅ¿ÉÊ¡ÂÔ£©
+23.å‘½åç©ºé—´çš„å®šä¹‰ï¼ŒGroovyå’ŒJavaç›¸åŒï¼Œåœ¨Javaä¸­ package edu.ecust.bluesun;   åœ¨Groovyä¸­ package edu.ecust.bluesun     ï¼ˆåˆ†å·å¯çœç•¥ï¼‰
 
-24.ÔÚµ¼ÈëÀà·½Ãæ£¬GroovyºÍJavaÏàÍ¬£¬ÔÚJavaÖÐ import edu.ecust.bluesun.GroovyTest;  ÔÚGroovyÖÐ import edu.ecust.bluesun.GroovyTest
+24.åœ¨å¯¼å…¥ç±»æ–¹é¢ï¼ŒGroovyå’ŒJavaç›¸åŒï¼Œåœ¨Javaä¸­ import edu.ecust.bluesun.GroovyTest;  åœ¨Groovyä¸­ import edu.ecust.bluesun.GroovyTest
 
-25.List³£Á¿(ÀàÐÍÎªjava.util.ArrayList)ÔÚJavaÖÐÃ»ÓÐ£¬ ÔÚGroovyÖÐ±íÊ¾Îª def list = [3, 11, "Hello", "É½·çÐ¡×Ó", "!"]
+25.Listå¸¸é‡(ç±»åž‹ä¸ºjava.util.ArrayList)åœ¨Javaä¸­æ²¡æœ‰ï¼Œ åœ¨Groovyä¸­è¡¨ç¤ºä¸º def list = [3, 11, "Hello", "å±±é£Žå°å­", "!"]
 
-26.ÔÚÒì³£´¦Àí·½Ãæ£¬GroovyÓëJavaÏàÍ¬£¬³ýÁË²»Ç¿ÖÆ³ÌÐòÔ±²¶»ñ¼ì²éÒì³£(checked exception)Íâ (Õâ¸úC#ºÜÏñ£¬Èç¹ûÎÒÃ»¼Ç´íµÄ»° :)
-        ²¢ÇÒÔÚ·½·¨ÉùÃ÷Ê±£¬Ò²¿ÉÒÔ²»Ð´throwsÓï¾ä¡£
+26.åœ¨å¼‚å¸¸å¤„ç†æ–¹é¢ï¼ŒGroovyä¸ŽJavaç›¸åŒï¼Œé™¤äº†ä¸å¼ºåˆ¶ç¨‹åºå‘˜æ•èŽ·æ£€æŸ¥å¼‚å¸¸(checked exception)å¤– (è¿™è·ŸC#å¾ˆåƒï¼Œå¦‚æžœæˆ‘æ²¡è®°é”™çš„è¯ :)
+        å¹¶ä¸”åœ¨æ–¹æ³•å£°æ˜Žæ—¶ï¼Œä¹Ÿå¯ä»¥ä¸å†™throwsè¯­å¥ã€‚
 
-27.·½·¨µÄÄ¬ÈÏ²ÎÊý£¬JavaÖÐÃ»ÓÐ£¬GroovyÖÐ±íÊ¾ÈçÏÂ£ºdef greet(name="andy"){...}
+27.æ–¹æ³•çš„é»˜è®¤å‚æ•°ï¼ŒJavaä¸­æ²¡æœ‰ï¼ŒGroovyä¸­è¡¨ç¤ºå¦‚ä¸‹ï¼šdef greet(name="andy"){...}
 
-28.ÔÚGroovyÖÐ£¬Óï¾äÈç¹ûµ¥¶ÀÕ¼Ò»ÐÐµÄ»°£¬¾äÎ²µÄ·ÖºÅ(;)¿ÉÒÔÊ¡ÂÔ£¬¶øÔÚJavaÖÐÃ¿ÌõÓï¾äºóÃæ±ØÐë¸úÓÐ·ÖºÅ(;)
+28.åœ¨Groovyä¸­ï¼Œè¯­å¥å¦‚æžœå•ç‹¬å ä¸€è¡Œçš„è¯ï¼Œå¥å°¾çš„åˆ†å·(;)å¯ä»¥çœç•¥ï¼Œè€Œåœ¨Javaä¸­æ¯æ¡è¯­å¥åŽé¢å¿…é¡»è·Ÿæœ‰åˆ†å·(;)
 
-29.ÔÚGroovyÖÐ£¬Èç¹û²»ÊÇBoolean»òbooleanÀàÐÍ£¬·Çnull»ò·Ç¿Õ(¿Õ×Ö·û´®£¬[]£¬[:])Îªtrue£¬nullÎªfalse£¬¶øJavaÖÐ¶ÔÏó²»¿ÉÒÔ±íÊ¾true»òfalse£»Èç¹ûÊÇBoolean»òbooleanÀàÐÍ£¬ÓëJavaÖÐµÄÒ»Ñù¡£
+29.åœ¨Groovyä¸­ï¼Œå¦‚æžœä¸æ˜¯Booleanæˆ–booleanç±»åž‹ï¼Œéžnullæˆ–éžç©º(ç©ºå­—ç¬¦ä¸²ï¼Œ[]ï¼Œ[:])ä¸ºtrueï¼Œnullä¸ºfalseï¼Œè€ŒJavaä¸­å¯¹è±¡ä¸å¯ä»¥è¡¨ç¤ºtrueæˆ–falseï¼›å¦‚æžœæ˜¯Booleanæˆ–booleanç±»åž‹ï¼Œä¸ŽJavaä¸­çš„ä¸€æ ·ã€‚
 
-30.ÔÚGroovyÖÐ£¬ÍòÊÂÍòÎï¶¼ÊÇ¶ÔÏó£¡¶øJavaÖÐ²»ÊÇÕâÑù£¬»ù±¾ÀàÐÍ(primitive type)¾Í²»ÊÇ¶ÔÏó¡£
+30.åœ¨Groovyä¸­ï¼Œä¸‡äº‹ä¸‡ç‰©éƒ½æ˜¯å¯¹è±¡ï¼è€ŒJavaä¸­ä¸æ˜¯è¿™æ ·ï¼ŒåŸºæœ¬ç±»åž‹(primitive type)å°±ä¸æ˜¯å¯¹è±¡ã€‚
 
-31.ÔÚJavaÖÐ£¬Class¶ÔÏó±íÊ¾ÎªClassName.class£¬¶øÔÚGroovyÖÐ£¬¿ÉÒÔÖ±½ÓÓÃClassName±íÊ¾Class¶ÔÏó
+31.åœ¨Javaä¸­ï¼ŒClasså¯¹è±¡è¡¨ç¤ºä¸ºClassName.classï¼Œè€Œåœ¨Groovyä¸­ï¼Œå¯ä»¥ç›´æŽ¥ç”¨ClassNameè¡¨ç¤ºClasså¯¹è±¡
 
-32.Groovy»á×Ô¶¯µ¼Èëjava.lang.*, java.util.*, java.net.*, java.io.*, java.math.BigInteger, java.math.BigDecimal,   groovy.lang.*, groovy.util.*£¬¶øJavaÔòÖ»×Ô¶¯µ¼Èëjava.lang.*
+32.Groovyä¼šè‡ªåŠ¨å¯¼å…¥java.lang.*, java.util.*, java.net.*, java.io.*, java.math.BigInteger, java.math.BigDecimal,   groovy.lang.*, groovy.util.*ï¼Œè€ŒJavaåˆ™åªè‡ªåŠ¨å¯¼å…¥java.lang.*
 
-33.Groovy²»½öÓÐ? :ÈýÔª²Ù×÷·û£¬»¹ÓÐ?:Á½Ôª²Ù×÷·û£¬µ«JavaÖ»ÓÐ? :ÈýÔª²Ù×÷·û¡£def result ?: "default result"£¬Èç¹ûresult²»Îª¿ÕÔòÊÇresult£¬·ñÔòÖµÎªdefault result
+33.Groovyä¸ä»…æœ‰? :ä¸‰å…ƒæ“ä½œç¬¦ï¼Œè¿˜æœ‰?:ä¸¤å…ƒæ“ä½œç¬¦ï¼Œä½†Javaåªæœ‰? :ä¸‰å…ƒæ“ä½œç¬¦ã€‚def result ?: "default result"ï¼Œå¦‚æžœresultä¸ä¸ºç©ºåˆ™æ˜¯resultï¼Œå¦åˆ™å€¼ä¸ºdefault result
 
-34.GroovyÄÜ½øÐÐ¶àÖØ¸³Öµ£¬µ«Java²»ÄÜ¡£def a,b   (a,b) = [a,b]    println([a,b])
+34.Groovyèƒ½è¿›è¡Œå¤šé‡èµ‹å€¼ï¼Œä½†Javaä¸èƒ½ã€‚def a,b   (a,b) = [a,b]    println([a,b])
 
-35.closureµÄownerÒýÓÃµÄÊÇ¸ÃclosureµÄ¡®ÓµÓÐÕß¡¯£¬ÒþÊ½±äÁ¿delegateµÄÄ¬ÈÏÖµÎªowner£¬Èç¹ûclosureÃ»ÓÐ¡®Ç¶Ì×¡¯ÔÚÆäËûclosureÖÐ£¬ÄÇÃ´¸ÃclosureµÄownerµÄÖµÎªthis£»·ñÔò¸ÃclosureµÄownerÒýÓÃµÄÊÇ¡®Ö±½Ó°üº¬¡¯¸ÃclosureµÄclosure
+35.closureçš„ownerå¼•ç”¨çš„æ˜¯è¯¥closureçš„â€˜æ‹¥æœ‰è€…â€™ï¼Œéšå¼å˜é‡delegateçš„é»˜è®¤å€¼ä¸ºownerï¼Œå¦‚æžœclosureæ²¡æœ‰â€˜åµŒå¥—â€™åœ¨å…¶ä»–closureä¸­ï¼Œé‚£ä¹ˆè¯¥closureçš„ownerçš„å€¼ä¸ºthisï¼›å¦åˆ™è¯¥closureçš„ownerå¼•ç”¨çš„æ˜¯â€˜ç›´æŽ¥åŒ…å«â€™è¯¥closureçš„closure
 
-36.¼¯ºÏÖ÷Òª±éÀú·½·¨£¬each{...}Öð¸ö±éÀú£¬collect{...}±éÀú¼¯ºÏ´¦ÀíºóµÄ½á¹û·µ»Ø¸ø¶ÔÓ¦µÄÏî£¬find{...}¸ù¾ÝÌõ¼þ·µ»ØÕÒµ½µÄµÚÒ»¸öÏî£¬findAll{...}¸ù¾ÝÌõ¼þ·µ»ØÕÒµ½µÄËùÓÐÏî£¬min/max{...}·µ»Ø¼¯ºÏÖÐ×îÐ¡×î´óµÄÏî£¬join{'-'}ÓÃ'-'Á¬½Ó¼¯ºÏÖÐËùÓÐµÄÏî£¬any/everyµÈµÈ
+36.é›†åˆä¸»è¦éåŽ†æ–¹æ³•ï¼Œeach{...}é€ä¸ªéåŽ†ï¼Œcollect{...}éåŽ†é›†åˆå¤„ç†åŽçš„ç»“æžœè¿”å›žç»™å¯¹åº”çš„é¡¹ï¼Œfind{...}æ ¹æ®æ¡ä»¶è¿”å›žæ‰¾åˆ°çš„ç¬¬ä¸€ä¸ªé¡¹ï¼ŒfindAll{...}æ ¹æ®æ¡ä»¶è¿”å›žæ‰¾åˆ°çš„æ‰€æœ‰é¡¹ï¼Œmin/max{...}è¿”å›žé›†åˆä¸­æœ€å°æœ€å¤§çš„é¡¹ï¼Œjoin{'-'}ç”¨'-'è¿žæŽ¥é›†åˆä¸­æ‰€æœ‰çš„é¡¹ï¼Œany/everyç­‰ç­‰
