@@ -1,5 +1,12 @@
 package com.cn.sz.meiju;
-
+/**
+ * 
+ * @author HuWeiLiang
+ * @desc  枚举类 001
+ * @date 2017年6月6日
+ * @time 上午10:39:13 
+ * @email huweiliang@tydic.com
+ */
 public class ColorEnum {
 
     private Color c = Color.RED;

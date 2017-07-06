@@ -7,7 +7,11 @@ package com.cn.sz.reflex.proxy.factory;
  */
 public class FruitTest {
     public static void main(String[] args) throws Exception {
-        fruit f = Factory.getInstance("com.cn.sz.reflex.proxy.factory.Orange");
+        String className="com.cn.sz.reflex.proxy.factory.Orange";
+        System.out.println("className:"+className);
+        className=Orange.class.getName();
+        System.out.println("className1:"+className);
+        fruit f = Factory.getInstance(className);
         if (f != null) {
             f.eat();
         }

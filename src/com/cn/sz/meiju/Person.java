@@ -1,5 +1,12 @@
 package com.cn.sz.meiju;
-
+/**
+ * 
+ * @author HuWeiLiang
+ * @desc 枚举类的使用  
+ * @date 2017年6月6日
+ * @time 上午10:39:54 
+ * @email huweiliang@tydic.com
+ */
 public class Person {
 
     public enum PersonEnum {
